@@ -1,0 +1,75 @@
+** Pattern 1: creating 13 processes
+Parent: created child 0 (pid 25019)
+Process 0 (pid 25019) created: will sleep for 6 seconds
+Parent: created child 1 (pid 25020)
+Process 1 (pid 25020) created: will sleep for 2 seconds
+Parent: created child 2 (pid 25021)
+Process 2 (pid 25021) created: will sleep for 5 seconds
+Parent: created child 3 (pid 25022)
+Process 3 (pid 25022) created: will sleep for 4 seconds
+Parent: created child 4 (pid 25023)
+Process 4 (pid 25023) created: will sleep for 8 seconds
+Parent: created child 5 (pid 25024)
+Process 5 (pid 25024) created: will sleep for 7 seconds
+Parent: created child 6 (pid 25025)
+Process 6 (pid 25025) created: will sleep for 4 seconds
+Parent: created child 7 (pid 25026)
+Process 7 (pid 25026) created: will sleep for 4 seconds
+Parent: created child 8 (pid 25027)
+Process 8 (pid 25027) created: will sleep for 2 seconds
+Parent: created child 9 (pid 25028)
+Process 9 (pid 25028) created: will sleep for 6 seconds
+Parent: created child 10 (pid 25029)
+Process 10 (pid 25029) created: will sleep for 4 seconds
+Parent: created child 11 (pid 25030)
+Process 11 (pid 25030) created: will sleep for 2 seconds
+Parent: created child 12 (pid 25031)
+** Pattern 1: All processes created
+Process 12 (pid 25031) created: will sleep for 8 seconds
+Process 1 (pid 25020): exiting
+Process 8 (pid 25027): exiting
+Process 11 (pid 25030): exiting
+Process 3 (pid 25022): exiting
+Process 6 (pid 25025): exiting
+Process 7 (pid 25026): exiting
+Process 10 (pid 25029): exiting
+Process 2 (pid 25021): exiting
+Process 0 (pid 25019): exiting
+Process 9 (pid 25028): exiting
+Process 5 (pid 25024): exiting
+Process 4 (pid 25023): exiting
+Process 12 (pid 25031): exiting
+** Pattern 1: All children have exited
+
+//
+
+** Pattern 2: creating 6 processes
+Parent: created child 0 (pid 24761)
+Child 0 (pid 24762): starting
+Child 0 (pid 24761), sleeping 2 seconds after creating child 0
+Child 1 (pid 24763): starting
+Child 1 (pid 24762), sleeping 2 seconds after creating child 1
+Child 2 (pid 24764): starting
+Child 2 (pid 24763), sleeping 2 seconds after creating child 2
+Child 3 (pid 24765): starting
+Child 3 (pid 24764), sleeping 3 seconds after creating child 3
+Child 4 (pid 24766): starting
+Child 4 (pid 24765), sleeping 6 seconds after creating child 4
+Child 5 (pid 24767): starting
+Child 5 (pid 24766), sleeping 3 seconds after creating child 5
+Child 6 (pid 24767) [no children created] sleeping 3 seconds
+Child 0 (pid 24761), waiting for child 0 (pid 24762)
+Child 1 (pid 24762), waiting for child 1 (pid 24763)
+Child 2 (pid 24763), waiting for child 2 (pid 24764)
+Child 3 (pid 24764), waiting for child 3 (pid 24765)
+Child 5 (pid 24766), waiting for child 5 (pid 24767)
+Child 6 (pid 24767) exiting.
+Child 5 (pid 24766) exiting.
+Child 4 (pid 24765), waiting for child 4 (pid 24766)
+Child 4 (pid 24765) exiting.
+Child 3 (pid 24764) exiting.
+Child 2 (pid 24763) exiting.
+Child 1 (pid 24762) exiting.
+Child 0 (pid 24761) exiting.
+Parent: child 0 (pid 24761) has exited
+** Pattern 2: All children have exited
